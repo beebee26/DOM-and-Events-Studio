@@ -72,6 +72,7 @@ If the "Up" or "Down" buttons were clicked, then the shuttle height should incre
 
 upRocket.addEventListener("click", function (event) {
     let element = event.target;
+    if (parseInt(rocketPic.style.top) > 0) {
     //Increase height by 10 px
     rocketPic.style.top =  parseInt(rocketPic.style.top) - 10 + 'px';
     //Increase height counter by 10000
@@ -80,6 +81,7 @@ upRocket.addEventListener("click", function (event) {
     shuttlebackground.style.backgroundColor = "blue";
     //Indicate shuttle is in flight
     flightStatus.innerHTML = "Shuttle in flight." 
+    }
 });
 
 downRocket.addEventListener("click", function (event) {
